@@ -1,7 +1,11 @@
 <template>
   <div class="hello">
     <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in lunbo"><img src="https://m.360buyimg.com/mobilecms/s1125x549_jfs/t12877/75/166741228/131674/5df662f8/5a0513d2N41a5050b.jpg!q70.jpg" alt=""></mt-swipe-item>
+      <mt-swipe-item v-for="(item,index) in lunbo" :key='index'>
+        <a :href="item.url">
+          <img :src="item.img" alt="">
+        </a>
+      </mt-swipe-item>
     </mt-swipe>
   </div>
 </template>
@@ -23,6 +27,7 @@ export default {
       const url = common.apihost + "api/getlunbo"
       this.$http.get(url).then(res => {
         this.lunbo = res.body.message
+        console.log(this.lunbo);
       }, err => {
         console.log(err);
       })
