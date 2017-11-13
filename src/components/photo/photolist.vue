@@ -9,7 +9,7 @@
         <div class="imgList">
             <ul>
                 <li v-for="item in photoList" :key="item.id">
-                    <router-link to="">
+                    <router-link :to="'/photo/photoinfo'+item.id">
                         <img :src="item.img_url" alt="">
                         <div>
                             <h3>{{item.title}}</h3>
@@ -98,9 +98,8 @@ export default {
         },
         photoListData(num) {
             const url = common.apihost + 'api/getimages/' + num
-            console.log(url)
             this.$http.get(url).then(res => {
-                console.log(res.data.message)
+                //console.log(res.data.message)
                 this.photoList = res.data.message
             }).catch(err => {
                 console.log(err);

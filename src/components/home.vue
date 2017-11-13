@@ -1,13 +1,18 @@
 <template>
   <div>
     <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="(item,index) in lunbo" :key='index'>
+      <!-- <mt-swipe-item v-for="(item,index) in lunbo" :key='index'>
         <a :href="item.url">
           <img :src="item.img" alt="">
         </a>
+      </mt-swipe-item> -->
+      <mt-swipe-item >
+        <img src="https://aecpm.alicdn.com/simba/img/TB14ab1KpXXXXclXFXXSutbFXXX.jpg_q50.jpg" alt="">
+      </mt-swipe-item>
+       <mt-swipe-item >
+        <img src="https://gw.alicdn.com/imgextra/i3/72/TB22duCbZjI8KJjSsppXXXbyVXa_!!72-0-lubanu.jpg_q50.jpg" alt="">
       </mt-swipe-item>
     </mt-swipe>
-
     <div class="mui-content">
       <ul class="mui-table-view mui-grid-view mui-grid-9">
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">

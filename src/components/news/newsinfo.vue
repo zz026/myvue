@@ -15,7 +15,7 @@
         </div>
 
         <!--评论子组件  -->
-        <subcomment :commentId="this.$route.params.newsid"></subcomment>
+        <subcomment :commentId="this.$route.params.newsId"></subcomment>
     </div>
 </template>
   
@@ -53,7 +53,7 @@ export default {
     },
     methods: {
         getnewsinfoDate() {
-            const url = `${common.apihost}api/getnew/${this.$route.params.newsid}`
+            const url = `${common.apihost}api/getnew/${this.$route.params.newsId}`
             const _this = this;
             this.$http.get(url).then(res => {
                 // console.log(res.data.message[0])

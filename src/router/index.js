@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import home from '@/components/home'
 import newslist from '@/components/news/newslist'
 import newsinfo from '@/components/news/newsinfo'
-import photo from '@/components/photo//photolist'
+import photolist from '@/components/photo/photolist'
+import photoinfo from '@/components/photo/photoinfo'
 
 //import VueResource from 'vue-resource'
 
@@ -23,11 +24,15 @@ export default new Router({
       path: '/news/newslist',
       component: newslist
     }, {
-      path: '/news/newsinfo:newsid',
-      component: newsinfo,
+      path: '/news/newsinfo:newsId',
+      component: newsinfo
     }, {
       path: '/photo/photolist',
-      component: photo,
+      component: photolist
+    },
+     {
+      path: '/photo/photoinfo:photoId',
+      component: photoinfo
     }
     /*, {
       path: '/aaa',
