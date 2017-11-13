@@ -6,6 +6,7 @@ import router from './router'
 import MintUI from 'mint-ui'
 import axios from 'axios'
 import moment from 'moment'
+import VuePreview from 'vue-preview'
 //import VueAxios from 'vue-axios'
 Vue.prototype.$http = axios
 
@@ -16,6 +17,8 @@ import '../static/css/site.css'
 Vue.config.productionTip = false
 
 Vue.use(MintUI)
+Vue.use(VuePreview)
+
 //Vue.use(VueAxios, axios)
 
 // 时间过滤器
